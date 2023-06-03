@@ -12,6 +12,10 @@ app.use('/login', loginPage);
 
 const PORT = process.env.PORT || 8000;
 
-app.listen(PORT, () => {
-    console.log(`Listening on Port: ${PORT}`);
+// db.sequelize.drop();
+
+db.sequelize.sync({ alter: true }).then(() => {
+    app.listen(PORT, () => {
+        console.log(`Listening on Port: ${PORT}`);
+    });
 });
