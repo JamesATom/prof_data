@@ -2,7 +2,8 @@ module.exports = (squelize, DataTypes) => {
     const User = squelize.define("User", {
         id: {
             type: DataTypes.INTEGER,
-            primaryKey: true,
+            autoIncrement: true,
+            primaryKey: true
         },
         name: {
             type: DataTypes.STRING,

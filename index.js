@@ -10,7 +10,7 @@ app.use(cors());
 app.use('/home', homePage);
 app.use('/login', loginPage);
 
-const PORT = process.env.PORT || 8000;
+const PORT = 3000;
 
 // db.sequelize.drop();
 
